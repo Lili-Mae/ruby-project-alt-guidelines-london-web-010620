@@ -5,7 +5,6 @@ class CreateFlights < ActiveRecord::Migration[5.2]
       t.integer :duration
       t.string :destination
       t.integer :price
-      t.integer :pilot_id
       t.integer :passenger_id
     end
   end

@@ -1,4 +1,4 @@
 class Flight < ActiveRecord::Base
-    belongs_to :passenger
-    belongs_to :pilot    
+    belongs_to :passengers
+    belongs_to :pilots    
 end

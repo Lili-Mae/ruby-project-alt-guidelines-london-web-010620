@@ -17,19 +17,16 @@ ActiveRecord::Schema.define(version: 2020_01_21_134541) do
     t.integer "duration"
     t.string "destination"
     t.integer "price"
-    t.integer "pilot_id"
     t.integer "passenger_id"
   end
 
   create_table "passengers", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
     t.string "passport_number"
   end
 
   create_table "pilots", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
   end
 
   create_table "pilots_flights", force: :cascade do |t|

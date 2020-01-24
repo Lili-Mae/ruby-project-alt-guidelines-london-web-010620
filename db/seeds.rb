@@ -1,16 +1,14 @@
 require 'faker'
 
-def random_data
+    5.times do random_data
 
     pa1 = Passenger.create(
         name: Faker::Name.name, 
-        age: Faker::Number.between(from: 1, to: 100), 
         passport_number: Faker::Alphanumeric.alphanumeric(number: 10)
     )
 
     pi1 = Pilot.create(
-        name: Faker::Name.name, 
-        age: Faker::Number.between(from: 25, to: 45)
+        name: Faker::Name.name
     )
 
     fl1 = Flight.create(
@@ -18,10 +16,5 @@ def random_data
         duration: Faker::Number.between(from: 1, to: 800),
         destination: Faker::Address.country,
         price: Faker::Number.between(from: 1, to: 2000),
-        pilot_id: pi1.id,
-        passenger_id: pa1.id
+        passenger_id: pa1
     )
-
-end 
-
-random_data
